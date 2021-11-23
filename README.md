@@ -6,9 +6,4 @@ Ever wanted to learn how to make Android apps? I have, so I created this playgro
 
 ## Projects
 
-1. -
-
-
-## Screenshots
-
-...will go here
+1. Hello Shapes - playing with basic shapes in Jetpack compose
