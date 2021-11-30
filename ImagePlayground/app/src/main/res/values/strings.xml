@@ -7,4 +7,5 @@
     <string name="center_crop">CenterCrop</string>
     <string name="center_inside">CenterInside</string>
     <string name="scale_type_title">ScaleType</string>
+    <string name="tint_mode_title">Tint mode</string>
 </resources>
