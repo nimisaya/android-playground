@@ -5,12 +5,78 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@color/black"
     tools:context=".LearnScaleType">
 
-    <ImageView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/dino_guy"
-        android:contentDescription="@string/desc_dino_guy"/>
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:padding="@dimen/section_heading"
+            android:text="@string/center"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="@color/white"
+            android:scaleType="center"
+            android:contentDescription="@string/desc_dino_guy"
+            app:srcCompat="@drawable/dino_guy" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:padding="@dimen/section_heading"
+            android:text="@string/center_crop"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/desc_dino_guy"
+            app:srcCompat="@drawable/dino_guy" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:padding="@dimen/section_heading"
+            android:text="@string/center_inside"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="@color/white"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/desc_dino_guy"
+            app:srcCompat="@drawable/dino_guy" />
+
+    </LinearLayout>
 
 </LinearLayout>
