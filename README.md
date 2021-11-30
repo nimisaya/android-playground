@@ -7,3 +7,4 @@ Ever wanted to learn how to make Android apps? I have, so I created this playgro
 ## Projects
 
 1. Hello Shapes - playing with basic shapes in Jetpack compose
+2. Image Playground - play around with ImageView
