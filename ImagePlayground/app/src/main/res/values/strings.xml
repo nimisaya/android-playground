@@ -2,4 +2,5 @@
     <string name="app_name">Image Playground</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="desc_dino_guy">A guy with dinosaur hair</string>
 </resources>
