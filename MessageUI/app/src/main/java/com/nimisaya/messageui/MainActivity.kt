@@ -14,13 +14,18 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Text("G\'day world!")
+            MessageCard(name = "Nimi")
         }
     }
+}
+
+@Composable
+fun MessageCard(name: String) {
+    Text(text = "G\'day $name!")
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    Text("G\'day world!")
+    MessageCard(name = "Nimi")
 }
