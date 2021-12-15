@@ -4,8 +4,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -14,12 +16,17 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.nimisaya.messageui.ui.theme.MessageUITheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MessageCard(Message("Nimi", "G\'day people"))
+            setContent{
+                MessageUITheme {
+                    MessageCard(Message("Nimi", "G\'day people"))
+                }
+            }
         }
     }
 }
@@ -33,7 +40,10 @@ fun MessageCard(msg: Message) {
 
         Spacer(modifier = Modifier.width(16.dp))
         Column {
-            Text(text = msg.author, fontWeight = FontWeight.Bold)
+            Text(text = msg.author,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colors.secondaryVariant
+                )
             Text(text = msg.body)
         }
     }
@@ -48,6 +58,7 @@ fun ProfilePicture(){
         Image(
             painter = painterResource(R.drawable.ic_launcher_background),
             contentDescription = "Contact profile picture background",
+            modifier = Modifier.border(1.5.dp, MaterialTheme.colors.secondary, CircleShape)
         )
         Image(
             painter = painterResource(R.drawable.ic_launcher_foreground),
@@ -60,5 +71,7 @@ fun ProfilePicture(){
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    MessageCard(Message(author = "PersonName", body = "I\'m a Message"))
+    MessageUITheme {
+        MessageCard(Message(author = "PersonName", body = "I\'m a Message"))
+    }
 }
