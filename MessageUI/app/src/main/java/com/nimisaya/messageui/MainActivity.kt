@@ -40,11 +40,15 @@ fun MessageCard(msg: Message) {
 
         Spacer(modifier = Modifier.width(16.dp))
         Column {
-            Text(text = msg.author,
-                fontWeight = FontWeight.Bold,
+            Text(
+                text = msg.author,
+                style = MaterialTheme.typography.subtitle2,
                 color = MaterialTheme.colors.secondaryVariant
                 )
-            Text(text = msg.body)
+            Text(
+                text = msg.body,
+                style = MaterialTheme.typography.subtitle2,
+            )
         }
     }
 }
