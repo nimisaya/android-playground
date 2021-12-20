@@ -1,5 +1,6 @@
 package com.nimisaya.animatedlist
 
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -97,6 +98,14 @@ fun OnboardingPreview() {
 @Preview(showBackground = true, widthDp = 320, name = "Animated List")
 @Composable
 fun DefaultPreview() {
+    AnimatedListTheme {
+        Greetings()
+    }
+}
+
+@Preview(showBackground = true, widthDp = 320, name = "Dark mode", uiMode = Configuration.UI_MODE_NIGHT_YES)
+@Composable
+fun DarkModePreview() {
     AnimatedListTheme {
         Greetings()
     }
